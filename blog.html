@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog IELTS Speaking — 9speak</title>
+<meta name="description" content="Tips, chiến lược và kinh nghiệm luyện IELTS Speaking từ đội ngũ 9speak và cộng đồng học viên.">
+<link rel="icon" type="image/png" href="icon-mark.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared.css">
+<style>
+/* Blog-specific styles */
+.blog-hero{padding:72px 0 56px;text-align:center;}
+.blog-hero h1{font-size:clamp(32px,5vw,56px);margin:16px 0 18px;}
+.blog-hero p{font-size:18px;color:var(--ink-soft);max-width:540px;margin:0 auto;}
+
+.blog-filters{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin:40px 0;}
+.filter-btn{padding:8px 18px;border-radius:100px;border:1.5px solid var(--line-2);background:transparent;font-size:13px;font-weight:500;cursor:pointer;transition:all .25s;color:var(--ink-soft);font-family:var(--f-body);}
+.filter-btn:hover,.filter-btn.active{background:var(--blue-600);color:white;border-color:var(--blue-600);}
+
+.blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;padding-bottom:80px;}
+@media(max-width:900px){.blog-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:580px){.blog-grid{grid-template-columns:1fr;}}
+
+.blog-card{background:var(--white);border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden;transition:all .3s var(--ease-out);text-decoration:none;color:inherit;display:flex;flex-direction:column;}
+.blog-card:hover{transform:translateY(-6px);box-shadow:var(--sh-lg);border-color:var(--blue-200);}
+.blog-card-img{height:180px;background:linear-gradient(135deg,var(--blue-50),var(--blue-100));display:flex;align-items:center;justify-content:center;font-size:48px;flex-shrink:0;}
+.blog-card-body{padding:24px;flex:1;display:flex;flex-direction:column;}
+.blog-cat{display:inline-block;font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--blue-600);margin-bottom:10px;}
+.blog-card-body h3{font-size:17px;line-height:1.4;margin-bottom:10px;color:var(--ink);}
+.blog-card-body p{font-size:14px;color:var(--ink-soft);line-height:1.6;flex:1;}
+.blog-meta{display:flex;gap:16px;margin-top:16px;padding-top:16px;border-top:1px solid var(--line);font-size:12px;color:var(--ink-mute);}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <div class="nav-inner">
+      <a href="index.html" class="logo">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAH4AAAAgCAYAAADUp8wPAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAOdEVYdFNvZnR3YXJlAEZpZ21hnrGWYwAAChtJREFUeAHtWwtUVNcV3QoaUDGK4ic1gviJ1SQqKirRAF3SGFJFiFptQ4B0ZaWJtSVN1WAjjiaxRq3iJ2nTqJDV1lZTikakplVBrcYvamJI/aOmfpD4QTFAqPbsXIY3bz7MeyNWmsxea9aad+feO2/eufecffa50+iWAAZQdgPYcQTILQQuXwfW7QWuVWifN/EFvvsQ0Pt+YPxQoF8IvGjAaOTO8AdOAvPeBzYcAC6VwxBa+QOjwoEVzwM+jeFFA4RLwx8oBtJXq53tKbq0A9ZMBh4OhhcNDA6Gvyy7+sUsYO0e4MoNrd3XBwgRQ8aIO49+EBgY6jhZ/icybq8aW/sF8pocB6TFiydoBi8aCHSGPyhuPWqWGNzOpSdFAT+OAQZ3dzsfqqqBjDxg6h/07eHdgIVJQMQD8KIBoNbwBbJbE5cAn11SHzSVHf54GGAZC/QN0Q/igM+vAW0DnE9KIhj8gt5jENzxqU8A0+IVGfTi7uErwx8/D/T5BVBepRpbNweW/gj4wVDHAWvElS/KBYr+DcSHq36+Tgic5T1g5nvOv3RAV5lHvu9bbeDFXULjY2L0AS9rRn+kJ1A419Ho6/ZJjJ8oxpbPCoqAkqvA2/8QD/E5TGPvcaCTMP7n33H0Cl78b+CbY0PiuNP/OEncdJC+04Fi4Okl5ozEMe7wW1k4568AmRO9xO9O47Vs2WziYcu+AH76uOz4lVu1D9961tHoJy5IjJ/i3Oj3tRaDNXdsvyQCz5o9MAT2y1gPL+4gXlmluNvGj4EblUDObtnxB05pHZyx9o9Oa+99JDfr1Ba4Wq4WwiMPON+ps/6iv2afuHCVAsaGqRTPFj4+8MIgii8C/k2A9q2Mj+FOLxHPekrGJkeKAntUDO9u0OiB4opfUO+pwg2XHP6w8IJoi6ykJx3774" alt="9speak" width="100" height="26">
+      </a>
+      <div class="nav-links">
+        <a href="index.html#features">Tính năng</a>
+        <a href="index.html#pricing">Bảng giá</a>
+        <a href="blog.html" style="color:var(--blue-600);">Blog</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html">Liên hệ</a>
+        <a href="https://9speak.vn" target="_blank" rel="noopener" class="btn btn-primary" style="padding:10px 20px;font-size:14px;">Thử miễn phí</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<section class="blog-hero">
+  <div class="container">
+    <div class="eyebrow">BLOG</div>
+    <h1>Tips & Chiến lược<br><span class="italic-accent">IELTS Speaking</span></h1>
+    <p>Bài viết chất lượng từ đội ngũ 9speak và giáo viên IELTS 8.0+ giúp bạn tăng band nhanh hơn.</p>
+  </div>
+</section>
+
+<div style="background:var(--mist);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:4px 0;">
+  <div class="container">
+    <div class="blog-filters">
+      <button class="filter-btn active" data-cat="all">Tất cả</button>
+      <button class="filter-btn" data-cat="tips">Tips &amp; Tricks</button>
+      <button class="filter-btn" data-cat="grammar">Ngữ pháp</button>
+      <button class="filter-btn" data-cat="vocab">Từ vựng</button>
+      <button class="filter-btn" data-cat="strategy">Chiến lược</button>
+      <button class="filter-btn" data-cat="success">Câu chuyện thành công</button>
+    </div>
+  </div>
+</div>
+
+<section style="padding:56px 0 80px;">
+  <div class="container">
+    <div class="blog-grid" id="blogGrid">
+
+      <!-- Dynamic Blog Cards will be rendered here -->
+
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo" style="filter:brightness(10);">
+          <span style="font-size:20px;font-weight:800;color:white;letter-spacing:-.03em;">9speak</span>
+        </a>
+        <p>AI Speaking Coach cho người Việt luyện IELTS. Đạt band 7.0+ với feedback chi tiết sau mỗi câu trả lời.</p>
+      </div>
+      <div class="footer-col"><h4>Sản phẩm</h4><ul>
+        <li><a href="https://9speak.vn" target="_blank">Thi thử miễn phí</a></li>
+        <li><a href="index.html#pricing">Bảng giá</a></li>
+        <li><a href="index.html#features">Tính năng</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Học IELTS</h4><ul>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Hỗ trợ</h4><ul>
+        <li><a href="contact.html">Liên hệ</a></li>
+        <li><a href="privacy.html">Privacy &amp; Terms</a></li>
+      </ul></div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 9speak. Made with ❤️ in Vietnam.</div>
+      <div class="footer-social">
+        <a href="https://9speak.vn" target="_blank">Facebook</a>
+        <a href="https://9speak.vn" target="_blank">TikTok</a>
+        <a href="https://9speak.vn" target="_blank">YouTube</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Fetch and render Blog Data
+fetch('data.json')
+  .then(res => res.json())
+  .then(data => {
+    const grid = document.getElementById('blogGrid');
+    let html = '';
+    data.blog.forEach((post, index) => {
+      const delayClass = (index % 3) === 0 ? '' : (index % 3 === 1 ? 'reveal-delay-1' : 'reveal-delay-2');
+      html += `
+      <a href="blog-detail.html?id=${post.id}" class="blog-card reveal ${delayClass}" data-cat="${post.cat}">
+        <div class="blog-card-img">${post.icon}</div>
+        <div class="blog-card-body">
+          <span class="blog-cat">${post.catName}</span>
+          <h3>${post.title}</h3>
+          <p>${post.excerpt}</p>
+          <div class="blog-meta"><span>📅 ${post.date}</span><span>⏱ ${post.read}</span></div>
+        </div>
+      </a>`;
+    });
+    grid.innerHTML = html;
+
+    // Observe newly added reveal elements
+    document.querySelectorAll('.blog-card').forEach(el => ro.observe(el));
+  })
+  .catch(err => console.error('Error loading blog data:', err));
+
+// Filter
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const cat = btn.dataset.cat;
+    document.querySelectorAll('.blog-card').forEach(card => {
+      card.style.display = (cat === 'all' || card.dataset.cat === cat) ? 'flex' : 'none';
+    });
+  });
+});
+// Reveal
+const ro = new IntersectionObserver(entries => {
+  entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('visible');ro.unobserve(e.target);} });
+}, {threshold:0.08});
+// Observe any initial reveal elements outside the dynamic grid
+document.querySelectorAll('.reveal:not(.blog-card)').forEach(el => ro.observe(el));
+</script>
+</body>
+</html>

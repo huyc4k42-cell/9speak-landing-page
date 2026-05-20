@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog Detail — 9speak</title>
+<link rel="icon" type="image/png" href="icon-mark.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared.css">
+<style>
+.back-btn{display:inline-flex;align-items:center;gap:8px;color:var(--ink-soft);text-decoration:none;font-size:14px;font-weight:500;padding:8px 0;transition:color .3s;margin-bottom:32px;}
+.back-btn:hover{color:var(--blue-600);}
+.article-wrap{max-width:720px;margin:0 auto;padding:56px 24px 80px;}
+.article-cat{display:inline-block;font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--blue-600);margin-bottom:16px;}
+.article-wrap h1{font-size:clamp(28px,4vw,44px);margin-bottom:20px;line-height:1.15;}
+.article-meta{display:flex;gap:20px;font-size:13px;color:var(--ink-mute);margin-bottom:40px;padding-bottom:32px;border-bottom:1px solid var(--line);}
+.article-content h2{font-size:clamp(20px,2.5vw,26px);margin:40px 0 16px;color:var(--ink);}
+.article-content h3{font-size:18px;margin:28px 0 12px;color:var(--ink);}
+.article-content p{margin-bottom:18px;color:var(--ink-soft);line-height:1.8;font-size:17px;}
+.article-content ul,.article-content ol{margin:0 0 20px 24px;color:var(--ink-soft);line-height:1.8;font-size:17px;}
+.article-content li{margin-bottom:8px;}
+.article-content blockquote{border-left:3px solid var(--blue-400);padding:16px 20px;background:var(--blue-50);border-radius:0 var(--r-sm) var(--r-sm) 0;margin:24px 0;font-style:italic;color:var(--blue-800);}
+.article-content strong{color:var(--ink);font-weight:700;}
+.article-cta{background:linear-gradient(135deg,var(--blue-600),var(--blue-800));border-radius:var(--r-xl);padding:48px 40px;text-align:center;color:white;margin-top:56px;}
+.article-cta h2{color:white;font-size:28px;margin-bottom:12px;}
+.article-cta p{color:rgba(255,255,255,.8);margin-bottom:28px;font-size:16px;}
+.article-cta .btn{background:white;color:var(--blue-700);font-weight:700;}
+.article-cta .btn:hover{background:var(--blue-50);}
+.tag-list{display:flex;gap:8px;flex-wrap:wrap;margin-top:40px;padding-top:32px;border-top:1px solid var(--line);}
+.tag{padding:5px 14px;background:var(--blue-50);color:var(--blue-700);border-radius:100px;font-size:12px;font-weight:600;}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <div class="nav-inner">
+      <a href="index.html" class="logo">
+        <span style="font-size:22px;font-weight:800;color:var(--blue-600);letter-spacing:-.04em;">9speak</span>
+      </a>
+      <div class="nav-links">
+        <a href="index.html#features">Tính năng</a>
+        <a href="index.html#pricing">Bảng giá</a>
+        <a href="blog.html" style="color:var(--blue-600);">Blog</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html">Liên hệ</a>
+        <a href="https://9speak.vn" target="_blank" rel="noopener" class="btn btn-primary" style="padding:10px 20px;font-size:14px;">Thử miễn phí</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div class="article-wrap">
+  <a href="blog.html" class="back-btn">← Quay lại Blog</a>
+
+  <span class="article-cat" id="artCat">Chiến lược</span>
+  <h1 id="artTitle">Làm thế nào để trả lời Part 2 IELTS Speaking mà không bị cạn ý?</h1>
+  <div class="article-meta">
+    <span>📅 <span id="artDate">15/05/2026</span></span>
+    <span>⏱ <span id="artRead">6 phút đọc</span></span>
+    <span>✍️ Đội ngũ 9speak</span>
+  </div>
+
+  <div class="article-content" id="artContent">
+    <p>Đang tải nội dung...</p>
+  </div>
+
+  <div class="article-cta">
+    <h2>Luyện Part 2 ngay hôm nay</h2>
+    <p>Mock test miễn phí với AI Examiner — nhận feedback chi tiết sau mỗi câu trả lời.</p>
+    <a href="https://9speak.vn" target="_blank" rel="noopener" class="btn btn-large">Thử 9speak miễn phí → <span class="btn-arrow"></span></a>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <span style="font-size:20px;font-weight:800;color:white;letter-spacing:-.03em;">9speak</span>
+        <p>AI Speaking Coach cho người Việt luyện IELTS.</p>
+      </div>
+      <div class="footer-col"><h4>Học IELTS</h4><ul>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Hỗ trợ</h4><ul>
+        <li><a href="contact.html">Liên hệ</a></li>
+        <li><a href="privacy.html">Privacy &amp; Terms</a></li>
+      </ul></div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 9speak. Made with ❤️ in Vietnam.</div>
+      <div class="footer-social">
+        <a href="https://9speak.vn" target="_blank">Facebook</a>
+        <a href="https://9speak.vn" target="_blank">TikTok</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Fetch article data
+const params = new URLSearchParams(window.location.search);
+const id = params.get('id') || '1';
+
+fetch('data.json')
+  .then(res => res.json())
+  .then(data => {
+    const post = data.blog.find(p => p.id === id);
+    if (post) {
+      document.getElementById('artCat').textContent = post.catName;
+      document.getElementById('artTitle').textContent = post.title;
+      document.getElementById('artDate').textContent = post.date;
+      document.getElementById('artRead').textContent = post.read;
+      document.title = post.title + ' — 9speak';
+      
+      let contentHtml = post.content || '<p>Nội dung đang được cập nhật...</p>';
+      if (post.tags && post.tags.length > 0) {
+        contentHtml += '<div class="tag-list">';
+        post.tags.forEach(tag => {
+          contentHtml += `<span class="tag">${tag}</span>`;
+        });
+        contentHtml += '</div>';
+      }
+      document.getElementById('artContent').innerHTML = contentHtml;
+    } else {
+      document.getElementById('artContent').innerHTML = '<p>Bài viết không tồn tại hoặc đã bị xóa.</p>';
+    }
+  })
+  .catch(err => {
+    console.error('Error loading article:', err);
+    document.getElementById('artContent').innerHTML = '<p>Lỗi tải nội dung bài viết. Vui lòng thử lại sau.</p>';
+  });
+</script>
+</body>
+</html>
