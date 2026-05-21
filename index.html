@@ -637,7 +637,7 @@
     /* ── HERO VISUAL ── */
     .hero-visual {
       position: relative;
-      height: 520px;
+      height: 420px;
       opacity: 0;
       animation: fadeIn 1.2s var(--ease-out) .6s forwards;
       transition: transform .15s ease-out;
@@ -656,7 +656,7 @@
 
     @media(max-width:968px) {
       .hero-visual {
-        height: 380px;
+        height: 340px;
       }
     }
 
@@ -670,13 +670,14 @@
       -webkit-mask-image: radial-gradient(ellipse at center, black 0%, transparent 70%);
     }
 
-    /* Browser frame */
+    /* Browser frame — width responsive: min(480px, 92% container) để không tràn ngang.
+       Centered đúng trục bằng translate(-50%, -50%). */
     .browser-frame {
       position: absolute;
       top: 50%;
       left: 50%;
-      transform: translate(-50%, -52%);
-      width: 480px;
+      transform: translate(-50%, -50%);
+      width: min(480px, 92%);
       background: #1A1F2E;
       border-radius: 14px;
       overflow: hidden;
@@ -689,11 +690,11 @@
 
       0%,
       100% {
-        transform: translate(-50%, -52%) translateY(0);
+        transform: translate(-50%, -50%) translateY(0);
       }
 
       50% {
-        transform: translate(-50%, -52%) translateY(-12px);
+        transform: translate(-50%, -50%) translateY(-12px);
       }
     }
 
@@ -2304,12 +2305,7 @@
       height: auto;
     }
 
-    /* Browser-frame width 480px desktop → thu nhỏ trên mobile để không tràn */
-    @media(max-width:560px) {
-      .browser-frame {
-        width: min(360px, 88vw);
-      }
-    }
+    /* width: min(480px, 92%) ở rule chính đã tự co theo container, không cần media riêng */
 
     /* FAQ answer: nội dung dài không bị cắt trên mobile */
     @media(max-width:768px) {
