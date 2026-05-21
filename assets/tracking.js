@@ -1,7 +1,7 @@
 /* ──────────────────────────────────────────────────────────────────────
-   9speak — Tracking module
+   9Speak — Tracking module
    --------------------------------------------------------------------
-   - Quản lý Google Tag Manager (GTM) cho 9speak landing
+   - Quản lý Google Tag Manager (GTM) cho 9Speak landing
    - Auto-attach event tracking cho CTA, form, FAQ
    - Auto-inject UTM params cho mọi link outbound tới 9speak.vn
    - Không can thiệp vào nội dung hiển thị
