@@ -676,7 +676,7 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -52%);
-      width: 360px;
+      width: 480px;
       background: #1A1F2E;
       border-radius: 14px;
       overflow: hidden;
@@ -2302,6 +2302,13 @@
     .browser-frame img {
       max-width: 100%;
       height: auto;
+    }
+
+    /* Browser-frame width 480px desktop → thu nhỏ trên mobile để không tràn */
+    @media(max-width:560px) {
+      .browser-frame {
+        width: min(360px, 88vw);
+      }
     }
 
     /* FAQ answer: nội dung dài không bị cắt trên mobile */
