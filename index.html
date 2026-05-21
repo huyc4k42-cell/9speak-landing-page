@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>9speak — Luyện IELTS Speaking với AI Examiner. Hiểu accent Việt.</title>
   <meta name="description"
     content="Test IELTS Speaking miễn phí 5 phút. AI Examiner chấm theo 4 tiêu chí IELTS chính thức. Sai số ±0.4 band so với examiner thật.">
@@ -2295,6 +2295,47 @@
     }
     .hero-img-anim {
       animation: heroFloat 6s ease-in-out infinite;
+    }
+
+    /* ── MOBILE RESPONSIVE FIXES (audit 2026-05-21) ── */
+    /* Hero image: tránh tràn ngang trên mobile */
+    .browser-frame img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    /* FAQ answer: nội dung dài không bị cắt trên mobile */
+    @media(max-width:768px) {
+      .faq-item.open .faq-answer {
+        max-height: 1200px;
+      }
+    }
+
+    /* Float cards: viewport rất nhỏ → giấu float-2 để tránh che hero */
+    @media(max-width:480px) {
+      .float-2 {
+        display: none;
+      }
+      .float-1 {
+        transform: scale(.88);
+      }
+    }
+
+    /* Pricing grid: override inline grid-template-columns:repeat(4,1fr)
+       cho tablet & mobile (inline có specificity cao nên cần !important) */
+    @media(max-width:1100px) {
+      .pricing-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        max-width: 720px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    @media(max-width:640px) {
+      .pricing-grid {
+        grid-template-columns: 1fr !important;
+        max-width: 420px;
+      }
     }
   </style>
 </head>
