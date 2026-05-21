@@ -1,0 +1,13 @@
+# Local tooling
+.claude/
+.DS_Store
+.vscode/
+.idea/
+
+# Python build artifacts
+__pycache__/
+*.pyc
+.venv/
+
+# Logs
+*.log
