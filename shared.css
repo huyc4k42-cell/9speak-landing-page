@@ -104,8 +104,8 @@ nav{position:sticky;top:0;z-index:100;padding:16px 0;background:rgba(251,252,254
 .card{background:var(--white);border:1px solid var(--line);border-radius:var(--r-lg);padding:32px;box-shadow:var(--sh-sm);}
 /* FOOTER */
 footer{background:var(--ink);color:rgba(255,255,255,.7);padding:56px 0 32px;}
-.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:48px;}
-@media(max-width:768px){.footer-grid{grid-template-columns:1fr 1fr;gap:32px;}}
+.footer-grid{display:grid;grid-template-columns:1fr;gap:40px;margin-bottom:48px;}
+@media(max-width:768px){.footer-grid{grid-template-columns:1fr;gap:24px;}}
 .footer-brand p{font-size:14px;line-height:1.6;margin-top:16px;color:rgba(255,255,255,.5);}
 .footer-col h4{font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:16px;}
 .footer-col ul{list-style:none;}
