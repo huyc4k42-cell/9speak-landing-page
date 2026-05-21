@@ -18,6 +18,17 @@
 <meta name="twitter:title" content="Bài viết IELTS Speaking — 9speak">
 <meta name="twitter:description" content="Bài viết chuyên sâu về IELTS Speaking từ đội ngũ 9speak.">
 <meta name="twitter:image" content="https://9speak.vn/hero-banner.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type":"ListItem","position":1,"name":"Trang chủ","item":"https://9speak.vn/"},
+    {"@type":"ListItem","position":2,"name":"Blog","item":"https://9speak.vn/blog.html"},
+    {"@type":"ListItem","position":3,"name":"Bài viết"}
+  ]
+}
+</script>
 <link rel="icon" type="image/png" href="icon-mark.png">
 <link rel="apple-touch-icon" href="icon-mark.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -120,6 +131,45 @@
 const params = new URLSearchParams(window.location.search);
 const id = params.get('id') || '1';
 
+// Chuyển date dd/mm/yyyy sang ISO yyyy-mm-dd cho schema datePublished
+function toIsoDate(s) {
+  const m = /^(\d{1,2})\/(\d{1,2})\/(\d{4})$/.exec(s || '');
+  if (!m) return '';
+  const [, d, mo, y] = m;
+  return `${y}-${mo.padStart(2,'0')}-${d.padStart(2,'0')}`;
+}
+
+function setMeta(selector, attr, value) {
+  const el = document.querySelector(selector);
+  if (el) el.setAttribute(attr, value);
+}
+
+function injectArticleSchema(post, canonicalUrl) {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": post.title,
+    "description": post.excerpt,
+    "image": "https://9speak.vn/hero-banner.png",
+    "datePublished": toIsoDate(post.date),
+    "dateModified": toIsoDate(post.date),
+    "author": {"@type": "Organization", "name": "9speak"},
+    "publisher": {
+      "@type": "Organization",
+      "name": "9speak",
+      "logo": {"@type": "ImageObject", "url": "https://9speak.vn/logo-full.png"}
+    },
+    "mainEntityOfPage": {"@type": "WebPage", "@id": canonicalUrl},
+    "keywords": (post.tags || []).join(', '),
+    "articleSection": post.catName,
+    "inLanguage": "vi-VN"
+  };
+  const s = document.createElement('script');
+  s.type = 'application/ld+json';
+  s.textContent = JSON.stringify(schema);
+  document.head.appendChild(s);
+}
+
 fetch('data.json')
   .then(res => res.json())
   .then(data => {
@@ -130,7 +180,19 @@ fetch('data.json')
       document.getElementById('artDate').textContent = post.date;
       document.getElementById('artRead').textContent = post.read;
       document.title = post.title + ' — 9speak';
-      
+
+      // Cập nhật meta description, canonical, OG, Twitter động theo bài
+      const canonicalUrl = `https://9speak.vn/blog-detail.html?id=${post.id}`;
+      setMeta('meta[name="description"]', 'content', post.excerpt);
+      setMeta('link[rel="canonical"]', 'href', canonicalUrl);
+      setMeta('meta[property="og:url"]', 'content', canonicalUrl);
+      setMeta('meta[property="og:title"]', 'content', post.title + ' — 9speak');
+      setMeta('meta[property="og:description"]', 'content', post.excerpt);
+      setMeta('meta[name="twitter:title"]', 'content', post.title + ' — 9speak');
+      setMeta('meta[name="twitter:description"]', 'content', post.excerpt);
+
+      injectArticleSchema(post, canonicalUrl);
+
       let contentHtml = post.content || '<p>Nội dung đang được cập nhật...</p>';
       if (post.tags && post.tags.length > 0) {
         contentHtml += '<div class="tag-list">';
