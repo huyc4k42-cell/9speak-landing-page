@@ -1,4 +1,4 @@
-# AGENTS.md — Quy cách làm việc với AI trên repo 9speak landing
+# AGENTS.md — Quy cách làm việc với AI trên repo 9Speak landing
 
 Tài liệu này áp dụng cho mọi agent (Claude, Cursor, Copilot, v.v.) khi tương tác với repo.
 Mục tiêu: giữ chất lượng cao, không phá nội dung đang chạy, có thể audit từng thay đổi.
