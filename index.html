@@ -967,6 +967,95 @@
   }
 
   /* ─────────────────────────────────────────
+     TRUST / ACCURACY
+  ───────────────────────────────────────── */
+  .trust-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    margin-top: 72px;
+    align-items: start;
+  }
+  @media (max-width:968px) {
+    .trust-grid { grid-template-columns: 1fr; gap: 52px; }
+  }
+
+  .trust-pillars { display: flex; flex-direction: column; }
+
+  .trust-pillar {
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    gap: 20px;
+    padding: 26px 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .trust-pillar:last-child { border-bottom: none; }
+
+  .trust-num {
+    font-size: 48px;
+    color: var(--blue-600);
+    font-weight: 800;
+    letter-spacing: -.04em;
+    line-height: 1;
+  }
+  .trust-pillar h3 {
+    margin-bottom: 8px;
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: -.015em;
+  }
+  .trust-pillar p { color: var(--ink-soft); line-height: 1.65; font-size: 15px; }
+
+  .accuracy-chart {
+    background: white;
+    border: 1px solid var(--line);
+    border-radius: var(--r-xl);
+    padding: 34px;
+    box-shadow: var(--sh-md);
+    position: sticky;
+    top: 96px;
+  }
+  .chart-header {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    gap: 16px;
+  }
+  .chart-title { font-size: 21px; font-weight: 700; letter-spacing: -.025em; }
+  .chart-subtitle { font-size: 13px; color: var(--ink-soft); margin-bottom: 26px; }
+  .chart-stat-val {
+    font-size: 27px; font-weight: 800; letter-spacing: -.04em;
+    color: var(--blue-600); line-height: 1; text-align: right;
+  }
+  .chart-stat-label {
+    font-size: 10px; color: var(--ink-mute);
+    text-transform: uppercase; letter-spacing: .1em; margin-top: 3px; text-align: right;
+  }
+  .chart-svg { width: 100%; height: auto; }
+  .chart-caption { text-align: center; margin-top: 10px; font-size: 11px; color: var(--ink-mute); letter-spacing:.04em; }
+
+  .expert-quote { margin-top: 26px; padding-top: 26px; border-top: 1px solid var(--line); }
+  .expert-quote blockquote {
+    font-style: italic; font-size: 16px; color: var(--ink); line-height: 1.6; margin-bottom: 14px;
+  }
+  .expert-quote blockquote::before {
+    content: '\201C'; font-size: 30px; color: var(--blue-300);
+    display: inline; vertical-align: -7px; margin-right: 2px;
+  }
+  .expert-attribution {
+    display: flex; align-items: center; gap: 12px;
+    font-size: 13px; color: var(--ink-soft);
+  }
+  .expert-avatar {
+    width: 38px; height: 38px; border-radius: 50%;
+    background: linear-gradient(135deg, var(--blue-400), var(--blue-700));
+    display: flex; align-items: center; justify-content: center;
+    font-size: 17px; color: white; font-weight: 600; flex-shrink: 0;
+  }
+  .expert-name { font-weight: 600; color: var(--ink); }
+
+  /* ─────────────────────────────────────────
      FAQ
   ───────────────────────────────────────── */
   .faq { background: var(--white); }
@@ -1337,6 +1426,109 @@
     </div>
   </section>
 </div>
+
+<!-- ─── TRUST / ACCURACY ──────────────────────────────────── -->
+<section id="trust">
+  <div class="container">
+    <div class="section-header reveal" style="text-align:left;max-width:720px;margin-left:0;">
+      <div class="eyebrow">ĐỘ CHÍNH XÁC</div>
+      <h2 style="margin-top:20px;">Vì sao AI 9Speak chấm<br><em class="italic-accent">sát examiner thật?</em></h2>
+      <p class="section-sub">Đây không phải ChatGPT generic. 9Speak được build riêng cho IELTS và người Việt.</p>
+    </div>
+    <div class="trust-grid">
+      <div class="trust-pillars reveal">
+        <div class="trust-pillar">
+          <div class="trust-num">01</div>
+          <div>
+            <h3>Chấm theo official IELTS band descriptors</h3>
+            <p>Toàn bộ thuật toán tuân thủ band descriptors chính thức từ British Council. Fluency, Lexical, Grammar, Pronunciation — đúng 4 tiêu chí.</p>
+          </div>
+        </div>
+        <div class="trust-pillar">
+          <div class="trust-num">02</div>
+          <div>
+            <h3>Train trên 50,000+ câu trả lời thật</h3>
+            <p>Model 9Speak được fine-tune trên hàng chục nghìn câu trả lời IELTS được chấm bởi giáo viên 8.0+.</p>
+          </div>
+        </div>
+        <div class="trust-pillar">
+          <div class="trust-num">03</div>
+          <div>
+            <h3>Hiểu accent người Việt</h3>
+            <p>Speech recognition được train trên 10,000+ giọng học viên VN. Bạn không cần "fake" accent native — chỉ cần nói rõ ràng.</p>
+          </div>
+        </div>
+        <div class="trust-pillar">
+          <div class="trust-num">04</div>
+          <div>
+            <h3>Sai số chỉ ±0.4 band so với examiner thật</h3>
+            <p>Trên 500 mock test đối chiếu, AI 9Speak lệch trung bình 0.4 band. Đủ chính xác để biết mình đang ở đâu.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="accuracy-chart reveal reveal-delay-1">
+        <div class="chart-header">
+          <div>
+            <div class="chart-title">AI Score vs<br>Examiner thật</div>
+            <div class="chart-subtitle" style="margin-top:8px;">500 mock test đối chiếu</div>
+          </div>
+          <div>
+            <div class="chart-stat-val">±0.4</div>
+            <div class="chart-stat-label">Sai số band</div>
+          </div>
+        </div>
+        <svg class="chart-svg" viewBox="0 0 360 260" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+              <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#E4ECF6" stroke-width="0.5"/>
+            </pattern>
+            <linearGradient id="dotGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#155DFC" stop-opacity="0.6"/>
+              <stop offset="100%" stop-color="#0A33A8" stop-opacity="0.8"/>
+            </linearGradient>
+          </defs>
+          <rect width="320" height="220" x="30" y="20" fill="url(#grid)"/>
+          <line x1="30" y1="240" x2="350" y2="240" stroke="#CFDCEB" stroke-width="1"/>
+          <line x1="30" y1="20" x2="30" y2="240" stroke="#CFDCEB" stroke-width="1"/>
+          <line x1="30" y1="240" x2="350" y2="20" stroke="#155DFC" stroke-width="1.5" stroke-dasharray="4,4" opacity="0.45"/>
+          <g fill="url(#dotGrad)">
+            <circle cx="55" cy="220" r="3.5"/><circle cx="68" cy="208" r="3.5"/><circle cx="80" cy="200" r="3.5"/>
+            <circle cx="92" cy="186" r="3.5"/><circle cx="105" cy="180" r="3.5"/><circle cx="118" cy="172" r="3.5"/>
+            <circle cx="130" cy="160" r="3.5"/><circle cx="142" cy="148" r="3.5"/><circle cx="155" cy="142" r="3.5"/>
+            <circle cx="168" cy="130" r="3.5"/><circle cx="180" cy="118" r="3.5"/><circle cx="192" cy="110" r="3.5"/>
+            <circle cx="205" cy="100" r="3.5"/><circle cx="218" cy="90" r="3.5"/><circle cx="230" cy="82" r="3.5"/>
+            <circle cx="242" cy="70" r="3.5"/><circle cx="255" cy="62" r="3.5"/><circle cx="268" cy="52" r="3.5"/>
+            <circle cx="280" cy="46" r="3.5"/><circle cx="295" cy="38" r="3.5"/><circle cx="310" cy="32" r="3.5"/>
+            <circle cx="75" cy="215" r="3"/><circle cx="88" cy="195" r="3"/><circle cx="115" cy="178" r="3"/>
+            <circle cx="125" cy="175" r="3"/><circle cx="148" cy="155" r="3"/><circle cx="160" cy="148" r="3"/>
+            <circle cx="172" cy="120" r="3"/><circle cx="200" cy="115" r="3"/><circle cx="215" cy="98" r="3"/>
+            <circle cx="225" cy="92" r="3"/><circle cx="248" cy="76" r="3"/><circle cx="265" cy="68" r="3"/>
+            <circle cx="288" cy="48" r="3"/><circle cx="62" cy="225" r="3"/><circle cx="98" cy="190" r="3"/>
+            <circle cx="135" cy="158" r="3"/><circle cx="158" cy="138" r="3"/><circle cx="185" cy="125" r="3"/>
+            <circle cx="210" cy="105" r="3"/><circle cx="235" cy="78" r="3"/><circle cx="270" cy="58" r="3"/>
+          </g>
+          <text x="190" y="258" fill="#8593AE" font-size="10" font-family="Inter" text-anchor="middle">AI Score →</text>
+          <text x="18" y="130" fill="#8593AE" font-size="10" font-family="Inter" text-anchor="middle" transform="rotate(-90 18 130)">Examiner Score</text>
+          <text x="35" y="32" fill="#8593AE" font-size="9" font-family="Inter">9.0</text>
+          <text x="35" y="245" fill="#8593AE" font-size="9" font-family="Inter">4.0</text>
+          <text x="338" y="252" fill="#8593AE" font-size="9" font-family="Inter">9.0</text>
+        </svg>
+        <p class="chart-caption">500 mock test · ±0.4 band trung bình</p>
+        <div class="expert-quote">
+          <blockquote>Tôi test 9Speak với 50 học viên — feedback chính xác và actionable hơn tôi tưởng. Đặc biệt pronunciation chấm tới từng âm tiết."</blockquote>
+          <div class="expert-attribution">
+            <div class="expert-avatar">L</div>
+            <div>
+              <div class="expert-name">Cô Linh</div>
+              <div>IELTS 8.5 · 10 năm dạy IELTS</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- ─── FAQ ───────────────────────────────────────────────── -->
 <section class="faq" id="faq">
