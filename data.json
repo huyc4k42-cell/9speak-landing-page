@@ -1,184 +1,32 @@
 {
   "faq": [
     {
-      "id": "accuracy",
-      "title": "🎯 Độ chính xác AI",
-      "items": [
-        {
-          "q": "AI 9Speak chấm có chính xác như examiner thật không?",
-          "a": "Trên 500 mock test đối chiếu với điểm IELTS chính thức, AI 9Speak sai lệch trung bình <strong>±0.4 band</strong>. AI được calibrate hàng tháng bởi team giáo viên IELTS 8.0+. Đủ tin cậy để đánh giá trước khi đóng tiền thi thật."
-        },
-        {
-          "q": "AI có hiểu accent Việt của tôi không?",
-          "a": "Có. Speech recognition của 9Speak được optimize riêng cho người Việt, train trên 10,000+ giọng học viên VN. Không cần \"fake\" accent native — chỉ cần nói rõ ràng là AI nhận diện chính xác."
-        },
-        {
-          "q": "9Speak khác gì ChatGPT free hoặc app AI khác?",
-          "a": "ChatGPT không train riêng cho IELTS, không chấm theo 4 tiêu chí band descriptors, không có speech recognition tối ưu cho accent Việt. 9Speak được build chuyên biệt: AI Examiner → scoring algorithm → AI Report cá nhân hóa."
-        }
-      ]
+      "q": "AI 9Speak chấm có chính xác như examiner thật không?",
+      "a": "Trên 500 mock test đối chiếu với điểm IELTS chính thức, AI 9Speak sai lệch trung bình <strong>0.4 band</strong>. AI được calibrate hàng tháng bởi team giáo viên IELTS 8.0+. Bạn có thể tin cậy điểm AI để đánh giá trước khi đóng tiền thi thật."
     },
     {
-      "id": "features",
-      "title": "⚡ Tính năng",
-      "items": [
-        {
-          "q": "Tôi đang ở band 4.0, có dùng được không?",
-          "a": "Có. 9Speak có chủ đề và chế độ luyện cho mọi level từ 4.0 trở lên. AI Examiner điều chỉnh độ khó follow-up và feedback theo level của bạn."
-        },
-        {
-          "q": "9Speak có cho cả IELTS Academic và General không?",
-          "a": "Cả 2. Bạn chọn format khi bắt đầu mock test. Question bank được tách riêng theo Academic / General với bộ câu hỏi cập nhật theo quý."
-        },
-        {
-          "q": "AI Report gồm những gì?",
-          "a": "Sau mỗi buổi, bạn nhận báo cáo chi tiết gồm: band score dự đoán theo 4 tiêu chí (Fluency, Lexical, Grammar, Pronunciation), transcript có highlight lỗi, danh sách từ nên thay thế, và gợi ý câu trả lời mẫu band 7+."
-        }
-      ]
+      "q": "AI có hiểu accent Việt của tôi không?",
+      "a": "Có. Speech recognition của 9Speak được optimize riêng cho người Việt. Không cần \"fake\" accent native — chỉ cần nói rõ ràng, AI nhận diện chính xác."
     },
     {
-      "id": "pricing-faq",
-      "title": "💳 Bảng giá & Thanh toán",
-      "items": [
-        {
-          "q": "Nếu sau 1 tháng band không tăng thì sao?",
-          "a": "Bạn có 7 ngày hoàn tiền 100% không hỏi lý do. Với gói 12 tháng, nếu sau 30 ngày luyện đều mà band không tăng, chúng tôi cộng thêm 30 ngày miễn phí."
-        },
-        {
-          "q": "Thanh toán bằng những hình thức nào?",
-          "a": "9Speak hỗ trợ Momo, ZaloPay, Visa, Mastercard và chuyển khoản ngân hàng. Gói được kích hoạt ngay sau khi thanh toán xác nhận (thường dưới 2 phút)."
-        },
-        {
-          "q": "Có thể hủy gói bất kỳ lúc nào không?",
-          "a": "Có. Bạn có thể hủy trong Settings bất kỳ lúc nào — không cần liên hệ support. Gói vẫn hoạt động đến hết chu kỳ đã trả."
-        }
-      ]
+      "q": "9Speak khác gì ChatGPT free hoặc app AI khác?",
+      "a": "ChatGPT không train riêng cho IELTS, không chấm theo 4 tiêu chí band descriptors, không có speech recognition tối ưu cho accent Việt. 9Speak được build chuyên biệt từ AI Examiner đến scoring algorithm đến AI Report cá nhân hóa."
     },
     {
-      "id": "privacy",
-      "title": "🔒 Bảo mật & Dữ liệu",
-      "items": [
-        {
-          "q": "Data giọng nói của tôi có bị lưu/chia sẻ không?",
-          "a": "Audio chỉ lưu để bạn nghe lại trong account của mình. Không chia sẻ bên thứ 3. Không dùng train model nếu bạn không opt-in. Xóa bất kỳ lúc nào trong Settings."
-        },
-        {
-          "q": "9Speak tuân thủ quy định bảo vệ dữ liệu nào?",
-          "a": "9Speak tuân thủ Nghị định 13/2023/NĐ-CP về bảo vệ dữ liệu cá nhân tại Việt Nam. Toàn bộ thông tin chi tiết có trong <a href=\"privacy.html\" style=\"color:var(--blue-600);\">Privacy Policy</a> của chúng tôi."
-        }
-      ]
+      "q": "Tôi đang ở band 4.0, có dùng được không?",
+      "a": "Có. 9Speak có topic và chế độ luyện cho mọi level từ 4.0 trở lên. AI Examiner điều chỉnh độ khó follow-up và feedback theo level của bạn."
     },
     {
-      "id": "technical",
-      "title": "💻 Kỹ thuật & Thiết bị",
-      "items": [
-        {
-          "q": "Tôi cần thiết bị / internet gì?",
-          "a": "Bất kỳ máy tính hoặc điện thoại nào có microphone và internet ổn định. Khuyến nghị tai nghe có mic. Hoạt động trên Chrome, Safari, Firefox, Edge."
-        },
-        {
-          "q": "9Speak có app iOS / Android không?",
-          "a": "Hiện tại 9Speak là web app hoạt động tốt trên mobile browser. App native iOS/Android đang trong lộ trình phát triển — đăng ký nhận thông báo tại trang Contact."
-        }
-      ]
-    }
-  ],
-  "blog": [
-    {
-      "id": "1",
-      "cat": "strategy",
-      "catName": "Chiến lược",
-      "icon": "🎯",
-      "title": "Làm thế nào để trả lời Part 2 IELTS Speaking mà không bị cạn ý?",
-      "excerpt": "Hướng dẫn cấu trúc câu trả lời Part 2 với phương pháp PEEL giúp bạn nói đủ 2 phút tự nhiên.",
-      "date": "15/05/2026",
-      "read": "6 phút đọc",
-      "tags": ["Part 2", "Long Turn", "Chiến lược", "PEEL Method", "Fluency"],
-      "content": "<p>Part 2 IELTS Speaking — hay còn gọi là \"Long Turn\" — là phần mà nhiều thí sinh Việt Nam sợ nhất. Bạn có đúng <strong>1 phút</strong> để ghi chú và sau đó phải nói liên tục trong <strong>1–2 phút</strong> về một chủ đề cho trước.</p><h2>Tại sao người học thường bị \"cạn ý\"?</h2><p>Nguyên nhân phổ biến nhất không phải là thiếu từ vựng — mà là thiếu <strong>cấu trúc tư duy</strong>. Khi không có framework, não bạn sẽ hoạt động theo kiểu \"kể chuyện không có đầu đuôi\", dẫn đến lặp ý và im lặng giữa chừng.</p><h2>Phương pháp PEEL cho Part 2</h2><p>PEEL là viết tắt của <strong>Point → Explain → Example → Link</strong>. Đây là cách cấu trúc câu trả lời hiệu quả nhất cho Long Turn:</p><ul><li><strong>Point:</strong> Nêu ý chính ngay từ đầu (\"The person I'd like to talk about is...\")</li><li><strong>Explain:</strong> Giải thích tại sao / như thế nào (2–3 câu)</li><li><strong>Example:</strong> Dẫn ví dụ cụ thể, kỷ niệm, hoặc chi tiết thực tế</li><li><strong>Link:</strong> Kết nối lại với câu hỏi gốc hoặc mở rộng thêm</li></ul><blockquote>\"Thay vì cố nhớ 'phải nói gì', hãy train não nhớ 'nói theo cấu trúc nào'. PEEL biến 1 ý thành 45–60 giây nói tự nhiên.\" — Đội ngũ 9Speak</blockquote><h2>Mẹo ghi chú trong 1 phút chuẩn bị</h2><p>1 phút không đủ để viết câu hoàn chỉnh. Hãy chỉ ghi <strong>từ khóa</strong> theo 4 phần của PEEL:</p><ol><li>Ghi 1 từ cho Point (VD: \"best friend Minh\")</li><li>Ghi 2–3 từ cho Explain (VD: \"loyal, honest, funny\")</li><li>Ghi 1 kỷ niệm cụ thể (VD: \"exam night 2023\")</li><li>Ghi kết luận ngắn (VD: \"still close now\")</li></ol><h2>Luyện tập hiệu quả với 9Speak</h2><p>9Speak có chế độ <strong>Mock Test Part 2</strong> với đầy đủ timer, cue card thật và AI feedback ngay sau khi bạn nói. AI sẽ chỉ ra:</p><ul><li>Bạn có đủ độ dài không (khuyến nghị 1:40–2:00 phút)</li><li>Mức độ coherence (có bị lặp ý không)</li><li>Các từ filler (\"um\", \"uh\", \"like\") xuất hiện bao nhiêu lần</li><li>Band score dự đoán cho phần Fluency &amp; Coherence</li></ul>"
+      "q": "9Speak có cho IELTS Academic vs General không?",
+      "a": "Cả 2. Bạn chọn format khi bắt đầu mock test. Question bank được tách riêng theo Academic / General."
     },
     {
-      "id": "2",
-      "cat": "tips",
-      "catName": "Tips & Tricks",
-      "icon": "📈",
-      "title": "7 lỗi phát âm người Việt hay mắc khi thi IELTS Speaking",
-      "excerpt": "Phân tích từng lỗi cụ thể và cách sửa nhanh để tránh mất điểm Pronunciation oan.",
-      "date": "10/05/2026",
-      "read": "8 phút đọc",
-      "tags": ["Pronunciation", "Tips & Tricks", "Common Mistakes"],
-      "content": "<p>Nội dung chi tiết bài viết đang được cập nhật. Bạn có thể quay lại sau.</p><h2>Lỗi Ending Sounds</h2><p>Người Việt thường hay nuốt âm cuối (ending sounds). Điều này ảnh hưởng lớn tới tiêu chí Pronunciation...</p>"
+      "q": "Data giọng nói của tôi có bị lưu/chia sẻ không?",
+      "a": "Audio chỉ lưu để bạn nghe lại trong account của mình. Không chia sẻ bên thứ 3. Không dùng train model nếu bạn không opt-in. Xóa bất kỳ lúc nào trong Settings."
     },
     {
-      "id": "3",
-      "cat": "success",
-      "catName": "Câu chuyện thành công",
-      "icon": "🏆",
-      "title": "Từ 5.5 lên 7.0 trong 6 tuần — hành trình của Hương",
-      "excerpt": "Nguyễn Thị Thu Hương chia sẻ lịch luyện tập thực tế và cách dùng 9Speak hiệu quả nhất.",
-      "date": "05/05/2026",
-      "read": "5 phút đọc",
-      "tags": ["Success Story", "Hành trình", "Band 7.0"],
-      "content": "<p>Nội dung chi tiết bài viết đang được cập nhật. Bạn có thể quay lại sau.</p>"
-    },
-    {
-      "id": "4",
-      "cat": "vocab",
-      "catName": "Từ vựng",
-      "icon": "📚",
-      "title": "200 từ vựng IELTS Speaking band 7+ theo 20 chủ đề hot nhất 2026",
-      "excerpt": "Danh sách từ vựng cấp cao được tổng hợp từ bộ đề thi thật — kèm ví dụ câu và cách dùng.",
-      "date": "28/04/2026",
-      "read": "12 phút đọc",
-      "tags": ["Từ vựng", "Band 7.0+", "Lexical Resource"],
-      "content": "<p>Nội dung chi tiết bài viết đang được cập nhật. Bạn có thể quay lại sau.</p>"
-    },
-    {
-      "id": "5",
-      "cat": "grammar",
-      "catName": "Ngữ pháp",
-      "icon": "✍️",
-      "title": "Cách dùng thì phức tạp trong IELTS Speaking để đạt điểm Grammatical Range",
-      "excerpt": "Hướng dẫn tự nhiên hoá việc dùng conditionals, perfect tenses và passive voice khi nói.",
-      "date": "20/04/2026",
-      "read": "7 phút đọc",
-      "tags": ["Ngữ pháp", "Grammatical Range", "Band 7.0+"],
-      "content": "<p>Nội dung chi tiết bài viết đang được cập nhật. Bạn có thể quay lại sau.</p>"
-    },
-    {
-      "id": "6",
-      "cat": "tips",
-      "catName": "Tips & Tricks",
-      "icon": "🧠",
-      "title": "Vào phòng thi không còn quên hết — kỹ thuật mindset cho ngày thi IELTS",
-      "excerpt": "Các bài tập tâm lý và kỹ thuật hít thở giúp bạn bình tĩnh và bật ra câu trả lời tự nhiên.",
-      "date": "12/04/2026",
-      "read": "5 phút đọc",
-      "tags": ["Mindset", "Tips & Tricks", "Tâm lý phòng thi"],
-      "content": "<p>Nội dung chi tiết bài viết đang được cập nhật. Bạn có thể quay lại sau.</p>"
-    },
-    {
-      "id": "7",
-      "cat": "strategy",
-      "catName": "Chiến lược",
-      "icon": "🎙️",
-      "title": "Fluency vs Accuracy: bạn nên ưu tiên cái nào khi luyện IELTS Speaking?",
-      "excerpt": "Phân tích trọng số 4 tiêu chí chấm điểm và chiến lược tối ưu theo mức band hiện tại.",
-      "date": "05/04/2026",
-      "read": "6 phút đọc",
-      "tags": ["Chiến lược", "Fluency", "Accuracy", "Band Descriptors"],
-      "content": "<p>Nội dung chi tiết bài viết đang được cập nhật. Bạn có thể quay lại sau.</p>"
-    },
-    {
-      "id": "8",
-      "cat": "success",
-      "catName": "Câu chuyện thành công",
-      "icon": "🌟",
-      "title": "AI predict 7.0 — thi thật đúng 7.0: câu chuyện của Phúc",
-      "excerpt": "Lê Hoàng Phúc kể về hành trình dùng 9Speak để biết chính xác mình đang ở đâu trước ngày thi.",
-      "date": "28/03/2026",
-      "read": "4 phút đọc",
-      "tags": ["Success Story", "Mock Test", "AI Feedback"],
-      "content": "<p>Nội dung chi tiết bài viết đang được cập nhật. Bạn có thể quay lại sau.</p>"
+      "q": "Tôi cần thiết bị / internet gì?",
+      "a": "Bất kỳ máy tính hoặc điện thoại nào có microphone và internet ổn định. Khuyến nghị tai nghe có mic. Hoạt động trên Chrome, Safari, Firefox, Edge."
     }
   ]
 }
