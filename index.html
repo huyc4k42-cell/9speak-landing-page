@@ -623,146 +623,137 @@
   /* ─────────────────────────────────────────
      FEATURES (dark)
   ───────────────────────────────────────── */
-  .features-wrap {
-    background: var(--blue-950);
+  .features-wrap { padding: 0 0 80px; }
+
+  .features-section {
+    background: linear-gradient(135deg, var(--blue-900) 0%, var(--blue-950) 65%, #020A28 100%);
+    color: white;
+    border-radius: var(--r-2xl);
+    margin: 0 24px;
+    padding: 100px 0;
     position: relative;
     overflow: hidden;
   }
-  .features-wrap::before {
+  @media (max-width:768px) {
+    .features-section { margin: 0 16px; padding: 72px 0; border-radius: var(--r-xl); }
+  }
+  .features-section::before {
     content: '';
-    position: absolute; inset: 0;
-    background:
-      radial-gradient(ellipse 70% 60% at 80% 0%, rgba(21,93,252,.35) 0%, transparent 60%),
-      radial-gradient(ellipse 50% 40% at 10% 100%, rgba(79,114,252,.2) 0%, transparent 60%);
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(90px);
     pointer-events: none;
+    top: -150px; right: -80px;
+    width: 500px; height: 500px;
+    background: radial-gradient(circle, rgba(21,93,252,.38) 0%, transparent 70%);
   }
-  .features-section { padding: 112px 0; }
-  @media (max-width:768px) { .features-section { padding: 72px 0; } }
+  .features-section::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    pointer-events: none;
+    bottom: -160px; left: -80px;
+    width: 380px; height: 380px;
+    background: radial-gradient(circle, rgba(139,92,246,.18) 0%, transparent 70%);
+  }
+  .features-section .container { position: relative; z-index: 2; }
+  .features-section .eyebrow { color: var(--blue-300); }
+  .features-section .eyebrow::before { background: var(--blue-400); }
+  .features-section h2 { color: white; margin: 16px 0 16px; }
+  .features-section .section-sub { color: rgba(255,255,255,.68); }
 
-  .features-section .section-sub { color: rgba(255,255,255,.6); }
-
-  .feature-tabs {
-    display: flex;
+  .feature-tab-nav {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 12px;
-    margin-bottom: 40px;
-    flex-wrap: wrap;
+    margin-bottom: 48px;
   }
+  @media (max-width:768px) { .feature-tab-nav { grid-template-columns: 1fr; } }
+
   .feature-tab-btn {
     display: flex;
     align-items: center;
     gap: 14px;
-    padding: 16px 24px;
-    background: rgba(255,255,255,.07);
-    border: 1px solid rgba(255,255,255,.12);
-    border-radius: var(--r-md);
+    padding: 20px 22px;
+    background: rgba(255,255,255,.04);
+    border: 1.5px solid rgba(255,255,255,.08);
+    border-radius: var(--r-lg);
     cursor: pointer;
-    transition: all .25s var(--ease-out);
     text-align: left;
-    flex: 1;
-    min-width: 220px;
+    transition: all .35s var(--ease-out);
+    position: relative;
+    overflow: hidden;
   }
-  .feature-tab-btn:hover {
-    background: rgba(255,255,255,.12);
-    border-color: rgba(255,255,255,.2);
+  .feature-tab-btn::after {
+    content: '';
+    position: absolute; inset: 0;
+    opacity: 0;
+    background: linear-gradient(135deg, rgba(21,93,252,.2), rgba(21,93,252,.05));
+    transition: opacity .35s;
+    pointer-events: none;
   }
-  .feature-tab-btn.active {
-    background: var(--blue-600);
-    border-color: var(--blue-600);
-    box-shadow: 0 0 0 1px var(--blue-500);
+  .feature-tab-btn.active { border-color: rgba(21,93,252,.55); background: rgba(21,93,252,.1); }
+  .feature-tab-btn.active::after { opacity: 1; }
+  .feature-tab-btn:hover:not(.active) { background: rgba(255,255,255,.07); border-color: rgba(255,255,255,.18); }
+
+  .tab-step {
+    font-size: 26px; color: var(--blue-300); font-weight: 700;
+    font-style: italic; flex-shrink: 0; line-height: 1; opacity: .65; transition: opacity .3s;
   }
-  .tab-num {
-    font-family: var(--f-mono);
-    font-size: 12px;
-    font-weight: 500;
-    color: rgba(255,255,255,.4);
-    flex-shrink: 0;
-  }
-  .feature-tab-btn.active .tab-num { color: rgba(255,255,255,.7); }
-  .tab-title {
-    font-size: 14.5px;
-    font-weight: 700;
-    color: rgba(255,255,255,.85);
-    letter-spacing: -.01em;
-    line-height: 1.2;
-  }
-  .tab-sub {
-    font-size: 12px;
-    color: rgba(255,255,255,.45);
-    margin-top: 3px;
-  }
+  .feature-tab-btn.active .tab-step { opacity: 1; }
+  .tab-info { display: flex; flex-direction: column; gap: 3px; }
+  .tab-title { font-weight: 700; font-size: 14.5px; color: white; letter-spacing: -.01em; }
+  .tab-sub { font-size: 11.5px; color: rgba(255,255,255,.45); line-height: 1.4; }
   .feature-tab-btn.active .tab-sub { color: rgba(255,255,255,.65); }
 
-  .feature-pane { display: none; }
-  .feature-pane.active { display: block; }
+  .feature-content { display: grid; grid-template-areas: "pane"; }
 
-  .pane-content {
+  .feature-pane {
+    grid-area: pane;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 56px;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 60px;
     align-items: center;
+    opacity: 0;
+    transform: translateY(18px);
+    pointer-events: none;
+    transition: opacity .5s var(--ease-out), transform .5s var(--ease-out);
   }
-  @media (max-width:768px) {
-    .pane-content { grid-template-columns: 1fr; gap: 40px; }
-    .pane-visual { order: -1; }
+  @media (max-width:968px) { .feature-pane { grid-template-columns: 1fr; gap: 36px; } }
+  .feature-pane.active { opacity: 1; transform: translateY(0); pointer-events: auto; }
+
+  .fp-text h3 { font-size: clamp(24px,2.8vw,36px); color: white; margin-bottom: 16px; line-height: 1.1; }
+  .fp-text p { color: rgba(255,255,255,.68); font-size: 16px; line-height: 1.7; margin-bottom: 26px; }
+
+  .fp-list { list-style: none; display: flex; flex-direction: column; gap: 10px; margin-bottom: 34px; }
+  .fp-list li {
+    display: flex; align-items: flex-start; gap: 10px;
+    color: rgba(255,255,255,.8); font-size: 14.5px; line-height: 1.5;
+  }
+  .fp-list li::before {
+    content: '';
+    width: 18px; height: 18px; border-radius: 50%; flex-shrink: 0; margin-top: 1px;
+    background: rgba(21,93,252,.25) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M2.5 6l2.5 2.5L9.5 3.5' stroke='%234D85FF' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3C/svg%3E") center/12px no-repeat;
+    border: 1px solid rgba(21,93,252,.45);
   }
 
-  .pane-text h3 { color: white; margin-bottom: 24px; }
-
-  .pane-list {
-    list-style: none;
-    margin-bottom: 36px;
-  }
-  .pane-list li {
-    font-size: 15px;
-    color: rgba(255,255,255,.7);
-    padding: 9px 0;
-    border-bottom: 1px solid rgba(255,255,255,.07);
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-    line-height: 1.5;
-  }
-  .pane-list li::before {
-    content: '✓';
-    color: var(--green);
-    font-weight: 700;
-    flex-shrink: 0;
-    margin-top: 1px;
-  }
-
-  .pane-visual {
-    border-radius: var(--r-lg);
+  .fp-screenshot {
+    border-radius: var(--r-xl);
     overflow: hidden;
-    border: 1px solid rgba(255,255,255,.12);
-    background: rgba(255,255,255,.05);
+    box-shadow: 0 24px 60px rgba(0,0,0,.5);
+    border: 1px solid rgba(255,255,255,.07);
+    background: rgba(255,255,255,.03);
     aspect-ratio: 16/10;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: flex; align-items: center; justify-content: center;
   }
-  .pane-visual img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
+  .fp-screenshot img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .fp-placeholder {
+    display: flex; flex-direction: column; align-items: center;
+    justify-content: center; gap: 12px;
+    color: rgba(255,255,255,.2); font-size: 13px; text-align: center; padding: 32px;
   }
-  .pane-visual-placeholder {
-    width: 100%; height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-    color: rgba(255,255,255,.25);
-    font-family: var(--f-mono);
-    font-size: 13px;
-    padding: 32px;
-    text-align: center;
-  }
-  .pane-visual-icon {
-    font-size: 48px;
-    opacity: .4;
-  }
+  .fp-placeholder-icon { font-size: 48px; opacity: .3; }
 
   /* ─────────────────────────────────────────
      TESTIMONIALS
@@ -1238,6 +1229,7 @@
     </a>
     <div class="nav-links">
       <a href="#features">Tính năng</a>
+      <a href="#trust">Độ Chính Xác</a>
       <a href="#faq">FAQ</a>
     </div>
     <a href="https://9speak.vn" class="btn btn-primary btn-sm" data-cta="header">
@@ -1345,84 +1337,97 @@
 </section>
 
 <!-- ─── FEATURES ──────────────────────────────────────────── -->
-<div class="features-wrap" id="features">
-  <section class="features-section">
-    <div class="container">
+<div class="features-wrap">
+  <section id="features" style="padding:0;">
+    <div class="features-section reveal">
+      <div class="container">
+        <div class="section-header">
+          <div class="pill pill-dark">TÍNH NĂNG</div>
+          <h2 style="margin:16px 0 14px;">Xem cách AI feedback<br><span class="italic-accent" style="color:#80A8FF;">giúp bạn tăng band</span></h2>
+          <p class="section-sub">9Speak giải quyết đúng vấn đề: luyện IELTS Speaking một mình mà vẫn biết rõ mình sai chỗ nào — và cách sửa.</p>
+        </div>
 
-      <div class="section-header reveal">
-        <div class="pill pill-dark">Tính năng</div>
-        <h2 style="color:white; margin-top:18px;">
-          Hai thứ bạn cần để<br>
-          <em class="italic-accent" style="color:var(--blue-300);">tăng band Speaking</em>
-        </h2>
-        <p class="section-sub">Không cần tutor. Không cần bạn học. Chỉ cần mic và 30 phút mỗi ngày.</p>
-      </div>
+        <div class="feature-tab-nav">
+          <button class="feature-tab-btn active" data-tab="speaking">
+            <span class="tab-step">01</span>
+            <div class="tab-info">
+              <div class="tab-title">Thi thử IELTS Speaking</div>
+              <div class="tab-sub">Môi trường 100% giống phòng thi thật</div>
+            </div>
+          </button>
+          <button class="feature-tab-btn" data-tab="practice">
+            <span class="tab-step">02</span>
+            <div class="tab-info">
+              <div class="tab-title">Luyện tập Mẫu Câu</div>
+              <div class="tab-sub">Phân tích chi tiết từng câu nói</div>
+            </div>
+          </button>
+          <button class="feature-tab-btn" data-tab="report">
+            <span class="tab-step">03</span>
+            <div class="tab-info">
+              <div class="tab-title">AI Report chuyên sâu</div>
+              <div class="tab-sub">Biết chính xác điểm mạnh &amp; yếu</div>
+            </div>
+          </button>
+        </div>
 
-      <div class="feature-tabs reveal">
-        <button class="feature-tab-btn active" data-tab="mock_test">
-          <span class="tab-num">01</span>
-          <div>
-            <div class="tab-title">Mock Test IELTS Speaking</div>
-            <div class="tab-sub">Thi thử như phòng thi thật</div>
+        <div class="feature-content">
+          <!-- Pane 1 -->
+          <div class="feature-pane active" id="tab-speaking">
+            <div class="fp-text">
+              <h3>Thi thử như<br><span class="italic-accent" style="color:#80A8FF;">phòng thi thật</span></h3>
+              <p>AI Examiner dẫn dắt toàn bộ bài thi Part 1, 2, 3 — đúng format IELTS chính thức. Bạn thi như đang ngồi trong phòng thi thật.</p>
+              <ul class="fp-list">
+                <li>AI Examiner hỏi Part 1, 2, 3 theo đúng format IELTS chính thức</li>
+                <li>Timer và follow-up questions như examiner thật</li>
+                <li>Hiểu accent Việt — không cần "fake" native accent</li>
+                <li>Band score tức thì ngay sau khi nói xong</li>
+              </ul>
+              <a href="https://9speak.vn" class="btn btn-white" data-cta="features-speaking">Thử ngay — miễn phí →</a>
+            </div>
+            <div class="fp-screenshot">
+              <div class="fp-placeholder"><div class="fp-placeholder-icon">🎙️</div><span>Mock Test Interface</span></div>
+            </div>
           </div>
-        </button>
-        <button class="feature-tab-btn" data-tab="ai_report">
-          <span class="tab-num">02</span>
-          <div>
-            <div class="tab-title">AI Report chi tiết</div>
-            <div class="tab-sub">Biết chính xác mình sai chỗ nào</div>
-          </div>
-        </button>
-      </div>
 
-      <div class="feature-pane active" id="tab-mock_test">
-        <div class="pane-content">
-          <div class="pane-text">
-            <h3>
-              Thi thử như<br>
-              <em class="italic-accent" style="color:var(--blue-300);">phòng thi thật</em>
-            </h3>
-            <ul class="pane-list">
-              <li>AI Examiner hỏi Part 1, 2, 3 theo đúng format IELTS chính thức</li>
-              <li>Timer và follow-up questions như examiner thật</li>
-              <li>Hiểu accent Việt — không cần "fake" native accent</li>
-              <li>Band score tức thì ngay sau khi nói xong</li>
-            </ul>
-            <a href="https://9speak.vn" class="btn btn-white" data-cta="features">
-              Thử ngay — miễn phí →
-            </a>
+          <!-- Pane 2 -->
+          <div class="feature-pane" id="tab-practice">
+            <div class="fp-text">
+              <h3>Luyện từng câu<br><span class="italic-accent" style="color:#80A8FF;">với AI feedback ngay</span></h3>
+              <p>Không cần đợi hết bài mới biết mình sai. Luyện từng câu trả lời, nhận feedback ngay lập tức để sửa đúng chỗ.</p>
+              <ul class="fp-list">
+                <li>Chọn chủ đề và luyện từng câu Part 1, 2, 3 riêng lẻ</li>
+                <li>AI feedback ngay sau mỗi câu trả lời</li>
+                <li>Gợi ý câu mẫu band 7+ cho đúng câu bạn vừa nói</li>
+                <li>500+ chủ đề cập nhật theo đề thi thật</li>
+              </ul>
+              <a href="https://9speak.vn" class="btn btn-white" data-cta="features-practice">Thử ngay — miễn phí →</a>
+            </div>
+            <div class="fp-screenshot">
+              <div class="fp-placeholder"><div class="fp-placeholder-icon">💬</div><span>Practice Interface</span></div>
+            </div>
           </div>
-          <div class="pane-visual">
-            <img src="./9speak-assets/speaking-test.png" alt="Mock Test Interface" loading="lazy"
-              onerror="this.parentElement.innerHTML='<div class=\'pane-visual-placeholder\'><div class=\'pane-visual-icon\'>🎙️</div><span>Mock Test Interface</span></div>'">
+
+          <!-- Pane 3 -->
+          <div class="feature-pane" id="tab-report">
+            <div class="fp-text">
+              <h3>AI Report<br><span class="italic-accent" style="color:#80A8FF;">chi tiết tới từng âm</span></h3>
+              <p>Sau mỗi buổi thi, nhận báo cáo chi tiết chỉ đúng điểm yếu — không phải feedback chung chung "cần luyện thêm".</p>
+              <ul class="fp-list">
+                <li>Band score đủ 4 tiêu chí: Fluency, Lexical, Grammar, Pronunciation</li>
+                <li>Transcript highlight từng lỗi cụ thể theo màu</li>
+                <li>Danh sách từ nên thay thế kèm band 7+ alternatives</li>
+                <li>Pronunciation chấm tới từng âm tiết</li>
+              </ul>
+              <a href="https://9speak.vn" class="btn btn-white" data-cta="features-report">Thử ngay — miễn phí →</a>
+            </div>
+            <div class="fp-screenshot">
+              <div class="fp-placeholder"><div class="fp-placeholder-icon">📊</div><span>AI Report Interface</span></div>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="feature-pane" id="tab-ai_report">
-        <div class="pane-content">
-          <div class="pane-text">
-            <h3>
-              AI Report<br>
-              <em class="italic-accent" style="color:var(--blue-300);">chi tiết tới từng lỗi</em>
-            </h3>
-            <ul class="pane-list">
-              <li>Band score đủ 4 tiêu chí: Fluency, Lexical, Grammar, Pronunciation</li>
-              <li>Transcript có highlight từng lỗi cụ thể</li>
-              <li>Danh sách từ nên thay thế kèm band 7+ alternatives</li>
-              <li>Gợi ý câu trả lời mẫu theo đúng câu bạn đã nói</li>
-            </ul>
-            <a href="https://9speak.vn" class="btn btn-white" data-cta="features">
-              Thử ngay — miễn phí →
-            </a>
-          </div>
-          <div class="pane-visual">
-            <img src="./9speak-assets/ai-report.png" alt="AI Report Interface" loading="lazy"
-              onerror="this.parentElement.innerHTML='<div class=\'pane-visual-placeholder\'><div class=\'pane-visual-icon\'>📊</div><span>AI Report Interface</span></div>'">
-          </div>
-        </div>
       </div>
-
     </div>
   </section>
 </div>
@@ -1615,6 +1620,17 @@
       btn.classList.add('active');
       var pane = document.getElementById('tab-' + name);
       if (pane) pane.classList.add('active');
+    });
+  });
+
+  // ── Smooth scroll for nav anchor links ──────────────────
+  document.querySelectorAll('a[href^="#"]').forEach(function(a) {
+    a.addEventListener('click', function(e) {
+      var target = document.querySelector(a.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
     });
   });
 
